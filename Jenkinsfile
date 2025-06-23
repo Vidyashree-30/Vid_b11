@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'dev', url: 'https://github.com/Vidyashree-30/Vid_b11.git'
+                git branch: 'dev', url: 'https://github.com/Vidyashree-30/Amazon-Jenkins.git'
             }
         }
 
