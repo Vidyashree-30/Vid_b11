@@ -32,4 +32,4 @@ pipeline {
             echo 'This runs after every build result.'
         }
     }
-}
+
