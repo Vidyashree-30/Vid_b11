@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Checkout scm') {
             steps {
                 dir('code') {
                     git branch: 'dev', url: 'https://github.com/Vidyashree-30/Amazon-Jenkins.git'
