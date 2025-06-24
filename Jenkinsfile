@@ -8,12 +8,14 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/vidyashree-30/Amazon-Jenkins.git'
             }
         }
+
         stage('compile') {
             steps {
                 sh 'mvn compile'
             }
         }
-      stage('test') {
+
+        stage('test') {
             steps {
                 sh 'mvn test'
             }
@@ -21,15 +23,14 @@ pipeline {
 
         stage('build') {
             steps {
-                 sh 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
-
-        
     }
 
+    post {
         always {
             echo 'This runs after every build result.'
         }
     }
-
+}
