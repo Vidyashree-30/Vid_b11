@@ -1,11 +1,11 @@
 pipeline {
-    agent {label 'windows-vid'}
+    agent any
    
     stages {
 
         stage('pull') {
             steps {
-                git branch: 'main', url: 'https://github.com/vidyashree-30/Amazon-Jenkins.git' credentials:'vidgit'
+                git branch: 'main', url: 'https://github.com/vidyashree-30/Amazon-Jenkins.git' 
             }
         }
 
