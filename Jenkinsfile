@@ -1,29 +1,29 @@
 pipeline {
-    agent any
+    agent {label 'windows-vid'}
    
     stages {
 
         stage('pull') {
             steps {
-                git branch: 'main', url: 'https://github.com/vidyashree-30/Amazon-Jenkins.git'
+                git branch: 'main', url: 'https://github.com/vidyashree-30/Amazon-Jenkins.git' 
             }
         }
 
         stage('compile') {
             steps {
-                sh 'mvn compile'
+                bat 'mvn compile'
             }
         }
 
         stage('test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
         stage('build') {
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
     }
